@@ -244,6 +244,9 @@ const handleLogout = function () {
       clearInterval(logoutTimer);
       labelWelcome.textContent = 'Log in to get started';
       containerApp.style.opacity = 0;
+
+      //=== show instructions  ===//
+      document.querySelector('.info').classList.remove('d-none');
     }
 
     //=== decrease by one second  ===//
@@ -303,6 +306,9 @@ btnLogin.addEventListener('click', function (e) {
 
     //=== updating ui  ===//
     updateUI(currentAccount);
+
+    //=== hide instructions  ===//
+    document.querySelector('.info').classList.add('d-none');
 
     //=== logout timer  ===//
     if (timer) clearInterval(timer);
